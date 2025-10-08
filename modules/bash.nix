@@ -96,6 +96,10 @@
           . /etc/bash_completion
         fi
       fi
+
+    # Open VS Code at the current working dir
+    code .
+
     '';
   };
   
