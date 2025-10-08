@@ -97,8 +97,14 @@
         fi
       fi
 
-    # Open VS Code at the current working dir
+    # Open VS Code at the current working dir and activate the virtual environment
     code .
+    if [ -d "hso-ml-palantir" ]; then
+      cd hso-ml-palantir
+      ven
+    fi
+
+    ven
 
     '';
   };
