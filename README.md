@@ -8,7 +8,7 @@ This document walks you through setting up Nix and Home Manager with Flakes to m
 Clone from your forked repo:
 
 ```bash
-mkdir -r ~/repos
+mkdir -p ~/repos
 cd ~/repos
 git clone <forked-repo>
 cd nix-config
