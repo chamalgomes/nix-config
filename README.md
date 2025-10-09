@@ -33,7 +33,8 @@ nix --version
 Run the following to enable system-wide nix commands:
 
 ```bash
-echo "experimental-features = nix-command flakes" | sudo tee /etc/nix/nix.conf
+mkdir -p ~/.config/nix
+echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
 ```
 
 ### 4. Update the Configurations
@@ -56,6 +57,7 @@ nix run github:nix-community/home-manager -- switch --flake .#azureuser -b backu
 To reapply changes after editing your config: 
 
 ```bash
+nix flake update
 nix run .#homeConfigurations.azureuser.activationPackage
 ```
 

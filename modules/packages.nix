@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, unstable, ... }:
 
 {
   home.packages = with pkgs; [
@@ -11,7 +11,7 @@
     actionlint
     
     # Development tools
-    just
+    unstable.just
     git
     curl
     jq
