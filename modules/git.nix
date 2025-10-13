@@ -3,8 +3,8 @@
 {
   programs.git = {
     enable = true;
-    userName = "Dillonwong12";
-    userEmail = "dillon.wong@healthscope.com.au";
+    userName = "ChamalGomesHSO";
+    userEmail = "chamalgomes166@gmail.com";
 
     extraConfig = {
       safe.directory = config.my.home.trustedGitDirs;
