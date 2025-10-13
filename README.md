@@ -8,8 +8,9 @@ This document walks you through setting up Nix and Home Manager with Flakes to m
 Clone from your forked repo:
 
 ```bash
-cd repos
-git clone <repo>
+mkdir -r ~/repos
+cd ~/repos
+git clone <forked-repo>
 cd nix-config
 ```
 
@@ -48,7 +49,8 @@ Build and activate your flake-based Home Manager configurations:
 nix run github:nix-community/home-manager -- switch --flake .#azureuser -b backup
 ```
 
-At this point, you should now be setup with basic Nix! Read on to learn more about working with Nix. 
+> [!NOTE]
+> At this point, you should now be setup with basic Nix! Read on to learn more about working with Nix. 
 
 ### 6. Apply Your Configuration Changes 
 
