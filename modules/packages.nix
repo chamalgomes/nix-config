@@ -1,5 +1,8 @@
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, just, ... }:
 
+let
+  justPackage = just.packages.${pkgs.system}.default;
+in
 {
   home.packages = with pkgs; [
     # Docker ecosystem
@@ -11,7 +14,7 @@
     actionlint
     
     # Development tools
-    unstable.just
+    justPackage
     git
     curl
     jq
