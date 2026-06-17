@@ -57,6 +57,7 @@
       fi
       
       # Load Git prompt support for PS1 branch display
+      # source: nixpkgs stable @ b134951a4c9f3c995fd7be05f3243f8ecd65d798
       . ${pkgs.git}/share/git/contrib/completion/git-prompt.sh
 
       if [ "$color_prompt" = yes ]; then

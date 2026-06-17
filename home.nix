@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/options.nix
+    ./modules/pinned-versions.nix
     ./modules/packages.nix
     ./modules/git.nix
     ./modules/bash.nix
