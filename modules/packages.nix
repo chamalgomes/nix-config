@@ -15,5 +15,6 @@
     git
     curl
     jq
+    terraform
   ];
 }
