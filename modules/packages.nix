@@ -13,6 +13,8 @@
     # Podman ecosystem
     podman
     podman-compose
+    fuse-overlayfs
+    slirp4netns
 
     # DBus (required by podman)
     dbus
