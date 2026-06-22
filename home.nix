@@ -9,6 +9,7 @@
     ./modules/vim.nix
     ./modules/zsh.nix
     ./modules/docker.nix
+    ./modules/podman.nix
   ];
 
   my.home.trustedGitDirs = [

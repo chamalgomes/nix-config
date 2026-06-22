@@ -10,11 +10,21 @@
     gh
     actionlint
     
+    # Podman ecosystem
+    podman
+    podman-compose
+    fuse-overlayfs
+    slirp4netns
+    netavark
+    aardvark-dns
+
+    # DBus (required by podman)
+    dbus
+
     # Development tools
     unstable.just
     git
     curl
     jq
-    podman
   ];
 }
