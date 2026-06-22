@@ -15,6 +15,8 @@
     podman-compose
     fuse-overlayfs
     slirp4netns
+    netavark
+    aardvark-dns
 
     # DBus (required by podman)
     dbus

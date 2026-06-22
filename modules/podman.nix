@@ -8,7 +8,7 @@
     events_logger = "file"
 
     [network]
-    network_backend = "slirp4netns"
+    network_backend = "netavark"
   '';
 
   # Storage configuration for rootless podman
