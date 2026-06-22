@@ -10,11 +10,17 @@
     gh
     actionlint
     
+    # Podman ecosystem
+    podman
+    podman-compose
+
+    # DBus (required by podman)
+    dbus
+
     # Development tools
     unstable.just
     git
     curl
     jq
-    podman
   ];
 }
