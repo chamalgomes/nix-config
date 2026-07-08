@@ -6,9 +6,10 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    just.url = "github:casey/just";
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }: let
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, just, ... }: let
     system  = "x86_64-linux";
     pkgs     = import nixpkgs { inherit system; config.allowUnfree = true; };
     unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
@@ -20,7 +21,7 @@
         inherit pkgs;
 
         # Pass unstable into modules
-        extraSpecialArgs = { inherit unstable; };
+        extraSpecialArgs = { inherit unstable just; };
 
         modules = [
           ./home.nix
@@ -38,6 +39,7 @@
           system = "aarch64-darwin";
           config.allowUnfree = true;
         };
+        extraSpecialArgs = { inherit just; };
         modules = [ ./home.nix ];
         home.username = "chamalgomes";
         home.homeDirectory = "/Users/chamalgomes";
@@ -45,4 +47,3 @@
     };
   };
 }
-
